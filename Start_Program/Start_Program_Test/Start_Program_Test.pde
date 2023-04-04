@@ -10,3 +10,4 @@ ellipse(500,500,80,80);
 fill(#4AFCF2);
 noStroke();
 ellipse(250,250,80,80);
+triangle(50, 50, 100, 100, 50, 100);
