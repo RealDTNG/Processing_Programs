@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class Start_Program_5 extends PApplet {
+public class Start_Program_6 extends PApplet {
 
 
 public void setup() {
@@ -22,13 +22,15 @@ public void setup() {
 
 public void draw() {
     quad(80, 20, 200, 60, 160, 100, 40, 60);
-}
+    triangle(200, 60, 155, 45, 200, 15);
+    triangle(40,60,120,86.7f,120,105);
+}   
 
 
   public void settings() { size(480, 120); }
 
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "Start_Program_5" };
+    String[] appletArgs = new String[] { "Start_Program_6" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
