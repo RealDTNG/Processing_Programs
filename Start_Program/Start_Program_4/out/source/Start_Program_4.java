@@ -13,24 +13,32 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class Start_Program_6 extends PApplet {
+public class Start_Program_4 extends PApplet {
 
-
-public void setup() {
+ public void setup() {
     /* size commented out by preprocessor */;
+    strokeWeight(4);
 }
 
 public void draw() {
-    quad(80, 20, 200, 60, 160, 100, 40, 60);
-    triangle(200, 60, 155, 45, 200, 15);
-    triangle(40,60,120,86.7f,120,105);
-}   
+    point(100, 50);
+
+    point(100, 50);
+    point(99, 49);
+    point(98, 48);
+    point(97, 47);
+    point(96, 46);
+    point(101, 51);
+    point(102, 52);
+    point(103, 53);
+    point(104, 54);
+}
 
 
-  public void settings() { size(480, 120); }
+  public void settings() { size(200, 100); }
 
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "Start_Program_6" };
+    String[] appletArgs = new String[] { "Start_Program_4" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
