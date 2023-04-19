@@ -6,5 +6,15 @@ void setup() {
 }
 
 void draw() {
-    ellipse(mouseX, mouseY, 9, 9);
+    if(mousePressed){
+    if (mouseButton == LEFT){
+        ellipse(mouseX, mouseY, 9, 9);
+    }
+    else if (mouseButton == RIGHT){
+        rect(mouseX, mouseY, 9, 9);
+    }
+    else if (mouseButton == CENTER){
+        triangle(mouseX, mouseY, 9, 9, 10, 10);
+    }
+    }
 }
