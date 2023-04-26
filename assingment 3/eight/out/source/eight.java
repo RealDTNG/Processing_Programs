@@ -13,32 +13,38 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class seven extends PApplet {
+public class eight extends PApplet {
+
+PImage photo1;
+PImage photo2;
+PImage photo3;
 
 public void setup() {
     /* size commented out by preprocessor */;
-    background(0xFF8EF213);
+    photo1 = loadImage("img1.jpg");
+    photo2 = loadImage("img2.jpg");
+    photo3 = loadImage("img3.jpg");
 }
 
-int x_size = 10;
-
 public void draw() {
-    background(0xFF8EF213);
-    if (mouseX > (150 -(x_size/2)) && mouseX <  (150 +(x_size/2)) && mouseY > (150 -(x_size/2)) && mouseY <  (150 +(x_size/2))){
-        x_size += 1;
-    }else if (x_size < 10){
-        x_size = 10;
-    }else{
-        x_size -= 1;
+
+    if(mousePressed ){
+        if(mouseButton == RIGHT){
+            image(photo1, 0, 0);
+        }else if (mouseButton == LEFT) {
+            image(photo2, 0, 0);
+        }else{
+            image(photo3, 0, 0);
+        }
+        
     }
-    circle(150,150,x_size);
 }
 
 
   public void settings() { size(300, 300); }
 
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "seven" };
+    String[] appletArgs = new String[] { "eight" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
