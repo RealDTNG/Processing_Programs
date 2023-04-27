@@ -13,34 +13,30 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class three extends PApplet {
+public class six extends PApplet {
 
-//rgb = 208, 0, 255
-
-int r = 208;
-int g = 0;
-int b = 255;
 
 public void setup() {
     /* size commented out by preprocessor */;
-
+    
+    fill(255,255,255);
 }
 
 public void draw() {
-    // c = color(value1, value2, value3);
-    //stroke(value1, value2, value3, alpha);
-    
-    for (int x = 0; x < 500; x +=1) {
-        stroke(r-(x/2), g, b-(x/2));
-        line(x, 0, x, 500);
+    background(0, 0, 0);
+    for (int y = 100; y < 500; y +=20) {
+        for (int i = 100; i < 700; i +=20) {
+            rect(i, y, 20, 20);
+        }
     }
+    
 }
 
 
-  public void settings() { size(500, 500); }
+  public void settings() { size(800, 600); }
 
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "three" };
+    String[] appletArgs = new String[] { "six" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
