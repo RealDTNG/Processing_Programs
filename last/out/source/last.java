@@ -19,7 +19,7 @@ public class last extends PApplet {
 //May/4/4/2023
 //Made to create a landscape for final project
 // gap for formating
-PImage wood, mat1, mat2, glass1,drywall,whitewood,brick,black_brick; // make all textures images
+PImage wood, mat1, mat2, glass1,drywall,whitewood,brick,black_brick,person; // make all textures images
 // gap for formating
 public void setup() {  // setup
   /* size commented out by preprocessor */; //make size + 3D
@@ -31,10 +31,17 @@ public void setup() {  // setup
     whitewood = loadImage("whitewood.jpg"); // load white_wood texture
     brick = loadImage("brick.jpg"); // load brick texture
     black_brick = loadImage("black brick.jpg"); // load brick texture
+    person = loadImage("person.png"); // load person
     textureMode(NORMAL);  // set textures as normal mode
+    noStroke();
 } // close setup
 // gap for formating
+int personx = 100;//x variable for person
+int persony = 270;//y variable for person
+int speed = 1; // person speed
+// gap for formating
 public void draw() { // draw function
+  // gap for formating
   beginShape(); // start custom obj
     texture(wood);  // set to wood texture
     vertex(0, 380,0,0); // point one
@@ -43,7 +50,7 @@ public void draw() { // draw function
     vertex(0, 340,0,1); // point four
     vertex(0, 380,0,0); //point five
   endShape(CLOSE);  // end shape and close
-
+  // gap for formating
     for (int x = 0; x < width; x+= 100 ){ // for loop to make first row of maps
         beginShape(); // start custom shape of first row of mats
           texture(mat1); // set to red mat texture
@@ -200,7 +207,17 @@ public void draw() { // draw function
       vertex(width-100, y,0,0); //point five
     endShape(CLOSE);  // end shape and close
   }//close for loop for vertical mats
+  image(person, personx, persony, 300*speed, 200);
+  personx += speed; // add speed to person each time
+  if (personx > (width-300)) {// if past right point
+    speed = -1; // set speed to negative
+  }else if (personx < 100) { // if past left point
+    speed = 1;  // set speed to positive
+  } // end of if's
 }//close draw
+public void mousePressed(){//mouse pressed function
+  glass1 = loadImage("glass2.png"); // load glass2 texture
+}//end mouse pressed
 
 
   public void settings() { size(800, 600, P3D); }
