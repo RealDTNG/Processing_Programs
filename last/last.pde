@@ -2,7 +2,7 @@
 //May/4/4/2023
 //Made to create a landscape for final project
 // gap for formating
-PImage wood, mat1, mat2, glass1,drywall,whitewood; // make all textures images
+PImage wood, mat1, mat2, glass1,drywall,whitewood,brick,black_brick; // make all textures images
 // gap for formating
 void setup() {  // setup
   size(800, 600,P3D); //make size + 3D
@@ -12,6 +12,8 @@ void setup() {  // setup
     glass1 = loadImage("glass1.png"); // load glass1 texture
     drywall = loadImage("drywall.jpg"); // load drywall texture
     whitewood = loadImage("whitewood.jpg"); // load white_wood texture
+    brick = loadImage("brick.jpg"); // load brick texture
+    black_brick = loadImage("black brick.jpg"); // load brick texture
     textureMode(NORMAL);  // set textures as normal mode
 } // close setup
 // gap for formating
@@ -53,7 +55,7 @@ void draw() { // draw function
           vertex(x+50, 340,0,0); //point five
         endShape(CLOSE); // end shape and close
         // gap for formating
-        beginShape(); // start custom shape for window wood
+        beginShape(); // start custom shape for wood
           texture(wood); // set to wood texture
           vertex(x, 340,0,0); // point one
           vertex(x+50,340,1,0); //point two
@@ -87,6 +89,60 @@ void draw() { // draw function
           vertex(800, 270,0,0); // point three
           vertex(750, 270,0,1); // point four
           vertex(750, 220,1,0); // point five
+        endShape(CLOSE); // end shape and close
+        // gap for formating
+        beginShape(); // start custom shape for bricks1
+          texture(brick); // set to brick texture
+          vertex(x, 100,0,0); // point one
+          vertex(x+50,100,1,0); //point two
+          vertex(x+50, 70,1,1); // point three
+          vertex(x, 70,0,1); // point four
+          vertex(x, 100,0,0); // point five
+        endShape(CLOSE); // end shape and close
+        // gap for formating
+        beginShape(); // start custom shape for bricks1
+          texture(brick); // set to brick texture
+          vertex(x+50, 100,0,0); // point one
+          vertex(x+100,100,1,0); //point two
+          vertex(x+100, 70,1,1); // point three
+          vertex(x+50, 70,0,1); // point four
+          vertex(x+50, 100,0,0); // point five
+        endShape(CLOSE); // end shape and close
+        // gap for formating
+        beginShape(); // start custom shape for bricks1
+          texture(black_brick); // set to brick texture
+          vertex(x, 70,0,0); // point one
+          vertex(x+50,70,1,0); //point two
+          vertex(x+50, 40,1,1); // point three
+          vertex(x, 40,0,1); // point four
+          vertex(x, 70,0,0); // point five
+        endShape(CLOSE); // end shape and close
+        // gap for formating
+        beginShape(); // start custom shape for bricks1
+          texture(black_brick); // set to brick texture
+          vertex(x+50, 70,0,0); // point one
+          vertex(x+100,70,1,0); //point two
+          vertex(x+100, 40,1,1); // point three
+          vertex(x+50, 40,0,1); // point four
+          vertex(x+50, 70,0,0); // point five
+        endShape(CLOSE); // end shape and close
+        // gap for formating
+        beginShape(); // start custom shape for bricks1
+          texture(black_brick); // set to brick texture
+          vertex(x, 40,0,0); // point one
+          vertex(x+50,40,1,0); //point two
+          vertex(x+50, 10,1,1); // point three
+          vertex(x, 10,0,1); // point four
+          vertex(x, 40,0,0); // point five
+        endShape(CLOSE); // end shape and close
+        // gap for formating
+        beginShape(); // start custom shape for bricks1
+          texture(black_brick); // set to brick texture
+          vertex(x+50, 40,0,0); // point one
+          vertex(x+100,40,1,0); //point two
+          vertex(x+100, 10,1,1); // point three
+          vertex(x+50, 10,0,1); // point four
+          vertex(x+50, 40,0,0); // point five
         endShape(CLOSE); // end shape and close
     }//close for loop for first mats, glass, drywall and whitewood
   for(int y = 435; y < height; y+= 55 ){// for loop to make the rest of the vertical mats
